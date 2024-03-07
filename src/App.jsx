@@ -1,5 +1,5 @@
-import Header from "./componenents/Header";
-import MainPage from "./componenents/MainPage";
+import MainPage from "./components/MainPage";
+import Nav from "./components/Nav";
 import { useLocation } from "react-router-dom";
 import "./css/App.css";
 
@@ -8,7 +8,7 @@ function App () {
 
   return (
     <div>
-      <Header currentPage={currentPage} />
+        <Nav currentPage={currentPage} />
       <MainPage currentPage={currentPage} />
     </div>
   );
