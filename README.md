@@ -1,8 +1,33 @@
-# React + Vite
+# Anders Newgard Fullstack Portfolio Built with React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Table of Contents
 
-Currently, two official plugins are available:
+* [Description](#description)
+* [Technologies Used](#technologies-used)
+* [License](#license)
+* [Questions](#questions)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Description
+
+This is my portfolio created with React. It contains a short bio, a list of my projects, and a contact form. It also has links to my GitHub and LinkedIn profiles, as well as my resume. This was a joy to work on, react is so much fun. Hope y'all enjoy! 
+
+[Click here to check out the deployed site](https://shiny-moonbeam-66a10c.netlify.app/)
+
+A screenshot of the landing page:
+![Screenshot of the landingpage](/public/image.png)
+
+## Technologies Used
+
+Primarily used react and the frameworks that come with it. For styling, I used Tailwind CSS as it's the css framework I'm most familiar with. I also used react-router-dom for routing. 
+
+## License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+This project is licensed under the MIT license. 
+
+## Questions
+
+If you have any questions, please feel free to reach out to me at anewgard41@gmail.com. You can also check out my GitHub profile.
+
+Thanks for checking out my portfolio. Cheers! 
