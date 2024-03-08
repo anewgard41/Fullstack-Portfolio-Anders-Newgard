@@ -6,106 +6,204 @@ Source: https://sketchfab.com/3d-models/free-cabin-on-the-island-d5a98f753465483
 Title: [FREE] Cabin on the island
 */
 
-
 import { useRef, useEffect } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
 import { a } from "@react-spring/three";
 import islandScene from "../assets/3d/island.glb";
 
+const Island = (isRotating, setIsRotating, ...props) => {
+  const islandRef = useRef();
 
-const Island = (props) => {
-    const islandref = useRef();
+  const { gl, viewport } = useThree();
   const { nodes, materials } = useGLTF(islandScene);
+
+  const lastX = useRef(0);
+  const rotationSpeed = useRef(0);
+  const dampingFactor = 0.95;
+
+  const handlePointerDown = (e) => {
+    e.stopPropogation();
+    e.preventDefault();
+    setIsRotating(true);
+
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+
+    lastX.current = clientX;
+  };
+
+  const handlePointerUp = (e) => {
+    e.stopPropogation();
+    e.preDefault();
+    setIsRotating(false);
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    const delta = (clientX - lastX.currnet) / viewport.width;
+    islandRef.current.rotation.y += delta * 0.01 * Math.PI;
+    lastX.current = clientX;
+    rotationSpeed.current = delta * 0.01 * Math.PI;
+  };
+
+  const handlePointerMove = (e) => {
+    e.stopPropogation();
+    e.preventDefault();
+
+    if (isRotating) {
+      handlePointerUp(e);
+    }
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "ArrowLeft") {
+      if (!isRotating) setIsRotating(true);
+      islandRef.current.rotation.y += 0.1 * Math.PI;
+    } else if (e.key === "ArrowRight") {
+      if (!isRotating) setIsRotating(true);
+      islandRef.current.rotation.y -= 0.1 * Math.PI;
+    }
+  };
+
+  const handleKeyUp = (e) => {
+    if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
+      setIsRotating(false);
+    }
+  };
+
+  useFrame(() => {
+    if (!isRotating) {
+      rotationSpeed.current *= dampingFactor;
+
+      if (Math.abs(rotationSpeed.current) < 0.001) {
+        rotationSpeed.current = 0;
+      }
+    } else {
+      const rotation = islandRef.current.rotation.y;
+      const normalizedRotation =
+        ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
+
+      // Set the current stage based on the island's orientation
+      switch (true) {
+        case normalizedRotation >= 5.45 && normalizedRotation <= 5.85:
+          setCurrentStage(4);
+          break;
+        case normalizedRotation >= 0.85 && normalizedRotation <= 1.3:
+          setCurrentStage(3);
+          break;
+        case normalizedRotation >= 2.4 && normalizedRotation <= 2.6:
+          setCurrentStage(2);
+          break;
+        case normalizedRotation >= 4.25 && normalizedRotation <= 4.75:
+          setCurrentStage(1);
+          break;
+        default:
+          setCurrentStage(null);
+      }
+    }
+  });
+
+  useEffect(() => {
+    document.addEventListener("pointerdown", handlePointerDown);
+    document.addEventListener("pointerup", handlePointerUp);
+    document.addEventListener("pointermove", handlePointerMove);
+    document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener("keyup", handleKeyUp);
+
+    return () => {
+      document.removeEventListener("pointerdown", handlePointerDown);
+      document.removeEventListener("pointerup", handlePointerUp);
+      document.removeEventListener("pointermove", handlePointerMove);
+      document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener("keyup", handleKeyUp);
+    };
+  }, [gl, handlePointerDown, handlePointerMove, handlePointerUp]);
+
   return (
-    <a.group ref={islandref} {...props} >
-        <mesh
-          geometry={nodes.Cylinder001_zemlia_0.geometry}
-          material={materials.zemlia}
-          position={[-5.702, -7.35, 0]}
-          rotation={[-Math.PI / 2, 0, 0]}
-          scale={100}
-        />
-        <mesh
-          geometry={nodes.Cube010_kamni_0.geometry}
-          material={materials.kamni}
-          position={[-59.517, -28.441, 73.597]}
-          rotation={[-Math.PI / 2, 0, 0]}
-          scale={100}
-        />
-        <mesh
-          geometry={nodes.Plane_voda4_0.geometry}
-          material={materials.voda4}
-          position={[-5.495, -40.336, -1.09]}
-          rotation={[-Math.PI / 2, 0, 0]}
-          scale={179.536}
-        />
-        <mesh
-          geometry={nodes.Cylinder008_stvol_dereva_0.geometry}
-          material={materials.stvol_dereva}
-          position={[-33.68, 40.551, -34.685]}
-          rotation={[-Math.PI / 2, 0, 0]}
-          scale={100}
-        />
-        <mesh
-          geometry={nodes.Cube016_dom_0.geometry}
-          material={materials.material}
-          position={[0.097, 7.137, 3.326]}
-          rotation={[-Math.PI / 2, 0, 0]}
-          scale={100}
-        />
-        <mesh
-          geometry={nodes.Cube015_most_0.geometry}
-          material={materials.most}
-          position={[61.626, -27.542, -0.049]}
-          rotation={[-Math.PI / 2, 0, 0]}
-          scale={100}
-        />
-        <mesh
-          geometry={nodes.Cylinder010_bochka_0.geometry}
-          material={materials.bochka}
-          position={[-20.303, 4.805, -15.471]}
-          rotation={[-Math.PI / 2, 0, 0]}
-          scale={100}
-        />
-        <mesh
-          geometry={nodes.Cylinder012_iashik_krishka_0.geometry}
-          material={materials.iashik_krishka}
-          position={[-24.477, 3.493, -10.127]}
-          rotation={[-Math.PI / 2, 0, 0]}
-          scale={100}
-        />
-        <mesh
-          geometry={nodes.Cylinder002_zemlia2_0.geometry}
-          material={materials.zemlia2}
-          position={[-5.702, -7.35, 0]}
-          rotation={[-Math.PI / 2, 0, 0]}
-          scale={100}
-        />
-        <mesh
-          geometry={nodes.Plane002_elka_krona4_0.geometry}
-          material={materials.elka_krona4}
-          position={[-4.105, 156.493, -63.304]}
-          rotation={[-2.32, 0.067, -3.103]}
-          scale={[1.432, 5.284, 10.019]}
-        />
-        <mesh
-          geometry={nodes.Plane016_elka_krona3_0.geometry}
-          material={materials.elka_krona3}
-          position={[-26.119, 173.419, -32.594]}
-          rotation={[-0.918, -0.297, -0.281]}
-          scale={[1.432, 5.284, 10.019]}
-        />
-        <mesh
-          geometry={nodes.Plane014_grass1_0.geometry}
-          material={materials.grass1}
-          position={[37.802, -14.162, -0.878]}
-          rotation={[-0.011, 0.098, -0.053]}
-          scale={1.577}
-        />
+    <a.group ref={islandRef} {...props}>
+      <mesh
+        geometry={nodes.Cylinder001_zemlia_0.geometry}
+        material={materials.zemlia}
+        position={[-5.702, -7.35, 0]}
+        rotation={[-Math.PI / 2, 0, 0]}
+        scale={100}
+      />
+      <mesh
+        geometry={nodes.Cube010_kamni_0.geometry}
+        material={materials.kamni}
+        position={[-59.517, -28.441, 73.597]}
+        rotation={[-Math.PI / 2, 0, 0]}
+        scale={100}
+      />
+      <mesh
+        geometry={nodes.Plane_voda4_0.geometry}
+        material={materials.voda4}
+        position={[-5.495, -40.336, -1.09]}
+        rotation={[-Math.PI / 2, 0, 0]}
+        scale={179.536}
+      />
+      <mesh
+        geometry={nodes.Cylinder008_stvol_dereva_0.geometry}
+        material={materials.stvol_dereva}
+        position={[-33.68, 40.551, -34.685]}
+        rotation={[-Math.PI / 2, 0, 0]}
+        scale={100}
+      />
+      <mesh
+        geometry={nodes.Cube016_dom_0.geometry}
+        material={materials.material}
+        position={[0.097, 7.137, 3.326]}
+        rotation={[-Math.PI / 2, 0, 0]}
+        scale={100}
+      />
+      <mesh
+        geometry={nodes.Cube015_most_0.geometry}
+        material={materials.most}
+        position={[61.626, -27.542, -0.049]}
+        rotation={[-Math.PI / 2, 0, 0]}
+        scale={100}
+      />
+      <mesh
+        geometry={nodes.Cylinder010_bochka_0.geometry}
+        material={materials.bochka}
+        position={[-20.303, 4.805, -15.471]}
+        rotation={[-Math.PI / 2, 0, 0]}
+        scale={100}
+      />
+      <mesh
+        geometry={nodes.Cylinder012_iashik_krishka_0.geometry}
+        material={materials.iashik_krishka}
+        position={[-24.477, 3.493, -10.127]}
+        rotation={[-Math.PI / 2, 0, 0]}
+        scale={100}
+      />
+      <mesh
+        geometry={nodes.Cylinder002_zemlia2_0.geometry}
+        material={materials.zemlia2}
+        position={[-5.702, -7.35, 0]}
+        rotation={[-Math.PI / 2, 0, 0]}
+        scale={100}
+      />
+      <mesh
+        geometry={nodes.Plane002_elka_krona4_0.geometry}
+        material={materials.elka_krona4}
+        position={[-4.105, 156.493, -63.304]}
+        rotation={[-2.32, 0.067, -3.103]}
+        scale={[1.432, 5.284, 10.019]}
+      />
+      <mesh
+        geometry={nodes.Plane016_elka_krona3_0.geometry}
+        material={materials.elka_krona3}
+        position={[-26.119, 173.419, -32.594]}
+        rotation={[-0.918, -0.297, -0.281]}
+        scale={[1.432, 5.284, 10.019]}
+      />
+      <mesh
+        geometry={nodes.Plane014_grass1_0.geometry}
+        material={materials.grass1}
+        position={[37.802, -14.162, -0.878]}
+        rotation={[-0.011, 0.098, -0.053]}
+        scale={1.577}
+      />
     </a.group>
   );
-}
+};
 
 export default Island;
-
