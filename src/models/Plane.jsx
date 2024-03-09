@@ -1,5 +1,5 @@
 import { React, useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import { useAnimations, useGLTF } from '@react-three/drei'
 import planeScene from "../assets/3d/plane.glb"
 import { a } from '@react-spring/three'
 
@@ -14,7 +14,8 @@ Title: Paper Plane
 
 const Plane = (...props) => {
     const planeRef = useRef();
-  const { nodes, materials } = useGLTF(planeScene);
+  const { nodes, materials, scene, animations } = useGLTF(planeScene);
+  const { actions } = useAnimations(animations, planeRef)
   return (
     <a.group ref = {planeRef} {...props}>
       <mesh
@@ -22,7 +23,8 @@ const Plane = (...props) => {
         receiveShadow
         geometry={nodes.Plane_Material001_0.geometry}
         material={materials["Material.001"]}
-        position={[0, 0, -1]}
+        // X, Y, Z axis
+        position={[0, -2.2, -2]}
         rotation={[-Math.PI / 3.2, 0, 0]}
         scale={1}
       />
