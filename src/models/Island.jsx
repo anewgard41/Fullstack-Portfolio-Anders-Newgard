@@ -79,7 +79,6 @@ const Island = ({isRotating, setIsRotating, setCurrentStage, ...props}) => {
       const rotation = islandRef.current.rotation.y;
       const normalizedRotation =
         ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
-      const setCurrentStage = () => {
       // Set the current stage based on the island's orientation
       switch (true) {
         case normalizedRotation >= 5.45 && normalizedRotation <= 5.85:
@@ -99,7 +98,7 @@ const Island = ({isRotating, setIsRotating, setCurrentStage, ...props}) => {
       }
     };
     }
-  });
+  );
 
   useEffect(() => {
     const canvas = gl.domElement;
