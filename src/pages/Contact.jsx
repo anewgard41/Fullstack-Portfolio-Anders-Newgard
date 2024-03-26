@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const handleChange = (e = {});
+  // const handleChange = (e = {});
 
   return (
     <section className="relative flex lg:flex-row flex-col max-container">
@@ -18,7 +18,7 @@ const Contact = () => {
               placeholder="Max"
               required
               value={form.name}
-              onChange={handleChange}
+              // onChange={handleChange}
             />
           </label>
           <label className="text-black-500 font-semibold">
@@ -30,7 +30,7 @@ const Contact = () => {
               placeholder="max@gmail.com"
               required
               value={form.email}
-              onChange={handleChange}
+              // onChange={handleChange}
             />
           </label>
           <label className="text-black-500 font-semibold">
@@ -43,7 +43,7 @@ const Contact = () => {
               placeholder="How can I help you?"
               required
               value={form.message}
-              onChange={handleChange}
+              // onChange={handleChange}
             />
           </label>
           <button type="submit" className="btn"></button>
