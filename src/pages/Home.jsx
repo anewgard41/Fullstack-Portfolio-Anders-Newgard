@@ -56,8 +56,8 @@ const Home = () => {
           <ambientLight intensity={0.5} />
           <hemisphereLight skyColor={"#b1e1ff"} groundColor={"#000000"} />
           <Plane 
-          planeScale={planeScale}
-          planePosition={planePosition}
+          scale={planeScale}
+          position={planePosition}
           />
           <Sky isRotating={isRotating} />
 
@@ -91,3 +91,16 @@ export default Home;
             <meshStandardMaterial attach="material" color="hotpink" />
           </mesh> */
 }
+
+// TODO
+
+// rewrite about and projects sections. MOST IMPORTNAT
+// fix island currentStages to be larger. 
+
+
+
+
+
+
+
+

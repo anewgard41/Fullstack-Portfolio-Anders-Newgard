@@ -1,15 +1,13 @@
+import buffs from "./buffs.png"
 import hero from './hero.jpg'
-import meta from './meta.png'
-import shopify from './shopify.png'
-import starbucks from './starbucks.png'
-import tesla from './tesla.png'
-import logo from './logo.svg'
+import gsnc from './gsnc.jpg'
+import jvg from './jvg.webp'
+import unc from './unc.jpg'
 
 export {
+    buffs,
+    gsnc,
     hero,
-    meta,
-    shopify,
-    starbucks,
-    tesla,
-    logo
+    jvg,
+    unc,
 }

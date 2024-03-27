@@ -7,10 +7,10 @@ function App () {
   const currentPage = useLocation().pathname;
 
   return (
-    <div>
+    <main className="h-[100vh]">
         <Nav currentPage={currentPage} />
       <MainPage currentPage={currentPage} />
-    </div>
+    </main>
   );
 
 }
