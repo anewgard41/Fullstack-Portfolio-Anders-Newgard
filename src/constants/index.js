@@ -124,11 +124,11 @@ export const skills = [
     name: "Tailwind CSS",
     type: "Frontend",
   },
-  {
-    imageUrl: typescript,
-    name: "TypeScript",
-    type: "Frontend",
-  },
+  // {
+  //   imageUrl: typescript,
+  //   name: "TypeScript",
+  //   type: "Frontend",
+  // },
 ];
 
 export const experiences = [
