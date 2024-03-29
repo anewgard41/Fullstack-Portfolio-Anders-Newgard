@@ -25,6 +25,7 @@ import {
   jest,
   flavfinds,
   prt,
+  paperplane,
   waveexchange,
 } from "../assets/icons";
 
@@ -223,27 +224,27 @@ export const projects = [
   },
   {
     iconUrl: prt,
-    theme: "btn-back-blue",
+    theme: "btn-back-pink",
     name: "Open Source Contributer to Phaser React Tools",
     description:
-      "",
+      "A toolkit for integrating Phaser, a popular game development framework, with React. I primarily helped with the development of the testbed, a tool for testing Phaser games in a React environment. Spent time debugging and refactoring the codebase, and writing tests to ensure the reliability of the toolkit.",
     link: "https://github.com/benrosen/phaser-react-tools",
   },
   {
     iconUrl: flavfinds,
-    theme: "btn-back-blue",
+    theme: "btn-back-red",
     name: "Flavorful Finds Recipe Finder",
     description:
       "Search for recipes and save them to your profile! Enter your favorite ingredients and find a link to a recipe along with an accompanying youtube tutorial. This is a static site built with HTML, CSS, and JavaScript. I was responsible for the UI/UX design, including the color scheme, layout, and typography. I also implemented the dynamic recipe card generation and the youtube search functionality.",
     link: "https://anewgard41.github.io/Flavor-Finds-Recipe-Finder/",
   },
   {
-    iconUrl: flavfinds,
+    iconUrl: paperplane,
     theme: "btn-back-blue",
     name: "This Portfolio!",
     description:
       "This portfolio was built with a bunch of super fun, versatile technologies, including React, Tailwind CSS, Vite, and the awesome Three.js library for incorporating 3D elements. Hosted on AWS using S3, Cloudfront,  Route 53, and certified with an SSL certificate from AWS Certificate Manager.",
-    link: "",
+    link: "https://github.com/anewgard41/Fullstack-Portfolio-Anders-Newgard",
   },
 ];
 

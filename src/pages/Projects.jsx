@@ -14,7 +14,7 @@ const Projects = () => {
       </h1>
 
       <div className="mt-5 flex flex-col gap-3 text-slate-500">
-        <p>Here are some of the projects I have either built from scratch or contributed to. I have worked on multiple frontend and backend teams, and am as excited about a polished UI as I am about a structurally secure backend!</p>
+        <p>Here are some of the projects I have either built from scratch or contributed to. I have worked on multiple frontend and backend teams, and am as excited about a polished UI as I am about a structurally sound backend!</p>
       </div>
 
       <div className="flex flex-wrap my-20 gap-16">

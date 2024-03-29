@@ -22,6 +22,7 @@ import linkedin from './linkedin.svg'
 import twitter from './twitter.svg'
 import pricewise from './pricewise.svg'
 import prt from './prt.svg'
+import paperplane from './paperplane.svg'
 import hiker from './hiker.svg'
 import flavfinds from './flavfinds.svg'
 import waveexchange from './waveexchange.svg'
@@ -55,6 +56,7 @@ export {
     hiker,
     flavfinds,
     prt,
+    paperplane,
     waveexchange,
     arrow,
     contact,

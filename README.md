@@ -9,16 +9,17 @@
 
 ## Description
 
-This is my portfolio created with React. It contains a short bio, a list of my projects, and a contact form. It also has links to my GitHub and LinkedIn profiles, as well as my resume. This was a joy to work on, react is so much fun. Hope y'all enjoy! 
+This is my portfolio created with React! I had so much fun toying around with this. Spin the island around and explore my portfolio and projects. I also have a contact form that you can use to reach out to me. Thanks for stopping by! 
 
 [Click here to check out the deployed site](https://www.dersdevelops.com/)
 
 A screenshot of the landing page:
-![Screenshot of the landingpage](![screenshot of front page](src/assets/images/image.png))
+![screenshot of front page](src/assets/images/image.png)
 
 ## Technologies Used
 
-Primarily used react and the frameworks that come with it. For styling, I used Tailwind CSS as it's the css framework I'm most familiar with. I also used react-router-dom for routing. 
+React, Threejs for 3D components, TailwindCSS, emailjs, react router, react three/fiber and react three/drei to help with using threejs in react, and finally vite for the build.
+
 
 ## License
 
@@ -28,6 +29,6 @@ This project is licensed under the MIT license.
 
 ## Questions
 
-If you have any questions, please feel free to reach out to me at anewgard41@gmail.com. You can also check out my GitHub profile.
+If you have any questions, please feel free to reach out to me at anewgard41@gmail.com. The contact form on my website sends emails there as well. You can also check out my [GitHub profile](https://github.com/anewgard41) if you'd like to see some of my other work. 
 
-Thanks for checking out my portfolio. Cheers! 
+Thanks for taking the time to check out my portfolio. Cheers! 
