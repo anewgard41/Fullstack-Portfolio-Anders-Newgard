@@ -237,6 +237,14 @@ export const projects = [
       "Search for recipes and save them to your profile! Enter your favorite ingredients and find a link to a recipe along with an accompanying youtube tutorial. This is a static site built with HTML, CSS, and JavaScript. I was responsible for the UI/UX design, including the color scheme, layout, and typography. I also implemented the dynamic recipe card generation and the youtube search functionality.",
     link: "https://anewgard41.github.io/Flavor-Finds-Recipe-Finder/",
   },
+  {
+    iconUrl: flavfinds,
+    theme: "btn-back-blue",
+    name: "This Portfolio!",
+    description:
+      "This portfolio was built with a bunch of super fun, versatile technologies, including React, Tailwind CSS, Vite, and the awesome Three.js library for incorporating 3D elements. Hosted on AWS using S3, Cloudfront,  Route 53, and certified with an SSL certificate from AWS Certificate Manager.",
+    link: "",
+  },
 ];
 
 

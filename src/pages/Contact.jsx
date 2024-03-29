@@ -35,7 +35,6 @@ const Contact = () => {
 
         setTimeout(() => {
           setForm({ name: "", email: "", message: "" });
-          showAlert({ show: false, text: "", type: "danger" });
         }, [3000]);
       })
       .catch((error) => {

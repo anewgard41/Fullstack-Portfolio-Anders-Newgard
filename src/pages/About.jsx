@@ -15,21 +15,27 @@ const About = () => {
         <span className="blue-gradient_text font-semibold drop-shadow">
           Anders
         </span>
+        , or{" "}
+        <span className="blue-gradient_text font-semibold drop-shadow">
+          Ders
+        </span>{" "}
+        for short!
       </h1>
 
       <div className="mt-5 flex flex-col gap-3 text-slate-500">
         <p>
           Fullstack Developer ceaslessly on the hunt for excellent ideas and
-          awesome people to work with. My unique blend of leadership, techical
-          skills, and commitment to lifelong learning make me a valuable asset
-          to any team. Unafraid to fail and always eager to learn. Let's build
-          something awesome together.
+          awesome people to work with. My varried background in multiple
+          industries and disciplines has prepared me to solve problems
+          creatively and intuitively. I am always eager to
+          hear about everyone's passions and experiences, and turn them into
+          something great. Let's build something awesome together.
         </p>
       </div>
 
       <div className="py-10 flex flex-col">
         <h3 className="subhead-text">My Skills</h3>
-        <div className="mt-16 flex flex-wrap gap-12">
+        <div className="mt-16 flex flex-wrap gap-10">
           {skills.map((skill) => (
             <div className="block-container w-20 h-20">
               <div className="btn-back rounded-xl" />
@@ -48,7 +54,11 @@ const About = () => {
       <div className="py-16">
         <h3 className="subhead-text">Work Experience and Education</h3>
         <div className="mt-5 flex flex-col gap-3 text-slate-500">
-          <p>Management, education, research science, dog training?</p>
+          <p>
+            My unique blend of leadership, techical skills, and commitment to
+            lifelong learning make me a valuable asset to any team. Unafraid to
+            fail and always eager to learn.
+          </p>
         </div>
 
         <div className="mt-12 flex">
@@ -101,8 +111,8 @@ const About = () => {
           </VerticalTimeline>
         </div>
       </div>
-      
-      <hr className="border-slate-200"/>
+
+      <hr className="border-slate-200" />
       <CallToAction />
     </section>
   );
