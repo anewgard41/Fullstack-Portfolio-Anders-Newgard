@@ -222,14 +222,14 @@ export const projects = [
       "Trail finding application with a social media component that enables the sharing of hiking experiences. Find friends, trails, hike, and tell a story! This application was built using Handlebars.js as the frontend framework, while Express and MySQL were used for the backend. I designed the backend, including the database schema, server configuartion, and API routes. I also implemented the user authentication and session management.", 
     link: "https://trail-buddy-cary-nc-4eb34ba4009f.herokuapp.com/",
   },
-  {
-    iconUrl: prt,
-    theme: "btn-back-pink",
-    name: "Open Source Contributer to Phaser React Tools",
-    description:
-      "A toolkit for integrating Phaser, a popular game development framework, with React. I primarily helped with the development of the testbed, a tool for testing Phaser games in a React environment. Spent time debugging and refactoring the codebase, and writing tests to ensure the reliability of the toolkit.",
-    link: "https://github.com/benrosen/phaser-react-tools",
-  },
+  // {
+  //   iconUrl: prt,
+  //   theme: "btn-back-pink",
+  //   name: "Open Source Contributer to Phaser React Tools",
+  //   description:
+  //     "A toolkit for integrating Phaser, a popular game development framework, with React. I primarily helped with the development of the testbed, a tool for testing Phaser games in a React environment. Spent time debugging and refactoring the codebase, and writing tests to ensure the reliability of the toolkit.",
+  //   link: "https://github.com/benrosen/phaser-react-tools",
+  // },
   {
     iconUrl: flavfinds,
     theme: "btn-back-red",
