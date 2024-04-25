@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import useAlert from "../hooks/useAlert";
 import Alert from "../components/Alert";
+import { socialLinks } from "../constants";
 
 const Contact = () => {
   const formRef = useRef(null);
@@ -105,6 +106,8 @@ const Contact = () => {
         </form>
       </div>
     </section>
+
+
   );
 };
 

@@ -24,11 +24,12 @@ const About = () => {
 
       <div className="mt-5 flex flex-col gap-3 text-slate-500">
         <p>
-          Fullstack Developer ceaslessly on the hunt for excellent ideas and
-          awesome people to work with. My varried background in multiple
-          industries and disciplines has prepared me to solve problems with both tact and creativity. I am always eager to
-          hear about everyone's passions and experiences, and turn them into
-          something great. Let's build something awesome together.
+          Full Stack Developer ceaselessly on the hunt for excellent ideas and
+          awesome people to work with. My varied background in multiple
+          industries and disciplines has prepared me to solve problems with both
+          tact and creativity. I am always eager to hear about everyone's
+          passions and experiences, and turn them into something great. Let's
+          build something awesome together.
         </p>
       </div>
 
