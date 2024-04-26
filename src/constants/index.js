@@ -189,11 +189,6 @@ export const experiences = [
 
 export const socialLinks = [
   {
-    name: "Contact",
-    iconUrl: contact,
-    link: "/contact",
-  },
-  {
     name: "GitHub",
     iconUrl: github,
     link: "https://github.com/anewgard41",
@@ -203,7 +198,12 @@ export const socialLinks = [
     iconUrl: linkedin,
     link: "https://www.linkedin.com/in/andrew-newgard",
   },
-];
+  // {
+  //   name: "Contact",
+  //   iconUrl: contact,
+  //   link: "/contact",
+  // }
+]; 
 
 export const projects = [
   {

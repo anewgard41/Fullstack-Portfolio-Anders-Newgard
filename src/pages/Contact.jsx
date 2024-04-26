@@ -32,7 +32,11 @@ const Contact = () => {
       )
       .then(() => {
         setIsLoading(false);
-        showAlert({ show: true, text: "Message sent successfully", type: "success" });
+        showAlert({
+          show: true,
+          text: "Message sent successfully",
+          type: "success",
+        });
 
         setTimeout(() => {
           setForm({ name: "", email: "", message: "" });
@@ -41,7 +45,11 @@ const Contact = () => {
       .catch((error) => {
         setIsLoading(false);
         console.log(error);
-        showAlert({ show: true, text: "Hm. Something went wrong.", type: "danger" });
+        showAlert({
+          show: true,
+          text: "Hm. Something went wrong.",
+          type: "danger",
+        });
       });
   };
   const handleFocus = () => {};
@@ -104,10 +112,31 @@ const Contact = () => {
             {isLoading ? "Sending..." : "Send Message"}
           </button>
         </form>
+        <div className="py-10 flex flex-col">
+          <div className="mt-7 flex flex-wrap justify-center gap-10">
+            {socialLinks.map((item) => (
+              <a
+                key={item.name}
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="block-container w-20 h-20">
+                  <div className="btn-back rounded-xl" />
+                  <div className="btn-front rounded-xl flex justify-center items-center">
+                    <img
+                      src={item.iconUrl}
+                      alt={item.name}
+                      className="w-1/2 h-1/2 object-contain"
+                    />
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
-
-
   );
 };
 
