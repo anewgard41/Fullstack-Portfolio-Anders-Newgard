@@ -24,6 +24,7 @@ import {
   handlebars,
   jest,
   flavfinds,
+  goblin,
   prt,
   paperplane,
   waveexchange,
@@ -125,11 +126,11 @@ export const skills = [
     name: "Tailwind CSS",
     type: "Frontend",
   },
-  // {
-  //   imageUrl: typescript,
-  //   name: "TypeScript",
-  //   type: "Frontend",
-  // },
+  {
+    imageUrl: typescript,
+    name: "TypeScript",
+    type: "Frontend",
+  },
 ];
 
 export const experiences = [
@@ -222,6 +223,7 @@ export const projects = [
       "Trail finding application with a social media component that enables the sharing of hiking experiences. Find friends, trails, hike, and tell a story! This application was built using Handlebars.js as the frontend framework, while Express and MySQL were used for the backend. I designed the backend, including the database schema, server configuartion, and API routes. I also implemented the user authentication and session management.", 
     link: "https://trail-buddy-cary-nc-4eb34ba4009f.herokuapp.com/",
   },
+  // Below contribution in progress.
   // {
   //   iconUrl: prt,
   //   theme: "btn-back-pink",
@@ -246,9 +248,15 @@ export const projects = [
       "This portfolio was built with a bunch of super fun, versatile technologies, including React, Tailwind CSS, Vite, and the awesome Three.js library for incorporating 3D elements. Hosted on AWS using S3, Cloudfront,  Route 53, and certified with an SSL certificate from AWS Certificate Manager.",
     link: "https://github.com/anewgard41/Fullstack-Portfolio-Anders-Newgard",
   },
+  {
+    iconUrl: goblin,
+    theme: "btn-back-green",
+    name: "Enemy NPC Generator",
+    description:
+      "Enemy NPC Generator for Table Top and Indie Games! This is a custom GPT bot of my design that is available on the chatGPT marketplace. I was responsible for training the model, designing the prompts given to the user, and fine tuning the visual product produced at the end of the enemy designing process. Designed to help game developers and dungeon masters fill out their fantasy worlds.",
+    link: "https://chatgpt.com/g/g-TbIHc00OA-enemy-npc-generator-for-table-top-and-indie-games",
+  },
 ];
 
 
-// A toolkit for integrating Phaser, a popular game development framework, with React. I primarily helped with the development of the testbed, a tool for testing Phaser games in a React environment. Spent time debugging and refactoring the codebase, and writing tests to ensure the reliability of the toolkit.
 
-//Here are some of the projects I have either built from scratch or contributed to. I have worked on multiple frontend and backend teams, and am as excited about a polished UI as I am about a structurally secure backend!

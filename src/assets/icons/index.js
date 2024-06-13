@@ -16,6 +16,7 @@ import react from './react.svg'
 import redux from './redux.svg'
 import sass from './sass.svg'
 import sql from './sql.svg'
+import goblin from './goblin.svg'
 import tailwindcss from './tailwindcss.svg'
 import typescript from './typescript.svg'
 import linkedin from './linkedin.svg'
@@ -48,6 +49,7 @@ export {
     redux,
     sass,
     sql,
+    goblin,
     tailwindcss,
     typescript,
     linkedin,
