@@ -5,7 +5,6 @@ import Alert from "../components/Alert";
 import { socialLinks } from "../constants";
 
 const Contact = () => {
-  const formRef = useRef(null);
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [isLoading, setIsLoading] = useState(false);
   const { alert, showAlert, hideAlert } = useAlert();
@@ -39,7 +38,11 @@ const Contact = () => {
         });
 
         setTimeout(() => {
-          setForm({ name: "", email: "", message: "" });
+          setForm({ name: "", email: "", message: "" }),
+          hideAlert({
+            show: false,
+            text: "",
+            type: ""});
         }, [3000]);
       })
       .catch((error) => {

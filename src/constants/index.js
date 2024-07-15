@@ -1,7 +1,9 @@
-import { buffs, gsnc, jvg, unc } from "../assets/images";
+import { awsCertificate, buffs, gsnc, jvg, unc } from "../assets/images";
 import {
   aws,
   contact,
+  docker,
+  dog,
   css,
   express,
   git,
@@ -40,6 +42,11 @@ export const skills = [
     imageUrl: css,
     name: "CSS",
     type: "Frontend",
+  },
+  {
+    imageUrl: docker,
+    name: "Docker",
+    type: "Backend",
   },
   {
     imageUrl: express,
@@ -135,11 +142,23 @@ export const skills = [
 
 export const experiences = [
   {
+    title: "AWS Certified Developer - Associate",
+    company_name: "Amazon Web Services (AWS) Training and Certification",
+    icon: aws,
+    iconBg: "#bbdefb",
+    date: "July 2024",
+    points: [
+      "Gained proficiency in writing applications with AWS service APIs, AWS CLI, and SDKs; using containers; and deploying with a CI/CD pipeline",
+      "Learned AWS best practices for development, deployment, security, and of course debugging",
+      "This portfolio and other projects of mine are deployed on AWS infrastructure!",
+    ],
+  },
+  {
     title: "Manager",
     company_name: "Joe Van Gogh",
     icon: jvg,
     iconBg: "#C3B1E1",
-    date: "October 2020 - Present",
+    date: "October 2020 - May 2024",
     points: [
       "Successfully managed daily operations of a beloved, local coffee shop, ensuring smooth workflow and exceptional customer service.",
       "Supervised a team of nine employees, providing training, guidance, and performance feedback to ensure high standards of service.",
@@ -204,7 +223,7 @@ export const socialLinks = [
   //   iconUrl: contact,
   //   link: "/contact",
   // }
-]; 
+];
 
 export const projects = [
   {
@@ -220,7 +239,7 @@ export const projects = [
     theme: "btn-back-green",
     name: "Trailbuddy",
     description:
-      "Trail finding application with a social media component that enables the sharing of hiking experiences. Find friends, trails, hike, and tell a story! This application was built using Handlebars.js as the frontend framework, while Express and MySQL were used for the backend. I designed the backend, including the database schema, server configuartion, and API routes. I also implemented the user authentication and session management.", 
+      "Trail finding application with a social media component that enables the sharing of hiking experiences. Find friends, trails, hike, and tell a story! This application was built using Handlebars.js as the frontend framework, while Express and MySQL were used for the backend. I designed the backend, including the database schema, server configuartion, and API routes. I also implemented the user authentication and session management.",
     link: "https://trail-buddy-cary-nc-4eb34ba4009f.herokuapp.com/",
   },
   // Below contribution in progress.
@@ -256,7 +275,14 @@ export const projects = [
       "Enemy NPC Generator for Table Top and Indie Games! This is a custom GPT bot of my design that is available on the chatGPT marketplace. I was responsible for training the model, designing the prompts given to the user, and fine tuning the visual product produced at the end of the enemy designing process. Designed to help game developers and dungeon masters fill out their fantasy worlds.",
     link: "https://chatgpt.com/g/g-TbIHc00OA-enemy-npc-generator-for-table-top-and-indie-games",
   },
+  // below project in progress.
+//   {
+//   iconUrl: dog,
+//   theme: "btn-back-pink",
+//   name: "Dog Picture Emporium",
+//   description:
+//     "Image hosting application hosted entirely on AWS infrastructure. Images are stored in S3 buckets and served securely via presigned URLs. A members only page features exclusive pictures only accessible to users with secret codes. The codes are stored in RDS and accessed programmatically via AWS SDKs. The application itself is hosted on ECS using Fargate. Cloudfront is used for content delivery and HTTPS protocol. The application follows AWS best practices for security, taking full advantage of security groups, private subnets, and IAM roles.",
+// },
 ];
-
 
 

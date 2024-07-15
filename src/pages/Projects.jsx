@@ -17,8 +17,10 @@ const Projects = () => {
         <p>
           Here are some of the projects I have either built from scratch or
           contributed to. I have worked on multiple frontend and backend teams,
-          and am as excited about a polished UI as I am about a structurally
-          sound backend!
+          and am as excited about a polished, accessible UI as I am about a
+          structurally sound backend! I also am experienced with AWS. I can develop
+          event driven microservices if monolithic architecture isn't suited
+          for the application.
         </p>
       </div>
 
