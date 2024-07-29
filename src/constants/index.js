@@ -1,9 +1,10 @@
-import { awsCertificate, buffs, gsnc, jvg, unc } from "../assets/images";
+import { buffs, gsnc, jvg, weVote, unc } from "../assets/images";
 import {
   aws,
   contact,
   docker,
   dog,
+  django,
   css,
   express,
   git,
@@ -30,6 +31,8 @@ import {
   prt,
   paperplane,
   waveexchange,
+  python,
+  postgresql,
 } from "../assets/icons";
 
 export const skills = [
@@ -129,6 +132,11 @@ export const skills = [
     type: "Database",
   },
   {
+    imageUrl: postgresql,
+    name: "SQL",
+    type: "Database",
+  },
+  {
     imageUrl: tailwindcss,
     name: "Tailwind CSS",
     type: "Frontend",
@@ -138,9 +146,31 @@ export const skills = [
     name: "TypeScript",
     type: "Frontend",
   },
+  {
+    imageUrl: python,
+    name: "Python",
+    type: "Backend",
+  },
+  {
+    imageUrl: django,
+    name: "Python",
+    type: "Backend",
+  },
 ];
 
 export const experiences = [
+  {
+    title: "Software Engineer",
+    company_name: "WeVote",
+    icon: weVote,
+    iconBg: "#adc7e8",
+    date: "July 2024 - Present",
+    points: [
+      "Contributed to the creation, implementation, and maintenance of features on the Web/Mobile Application and Server at WeVote, a non profit dedicated to information and voter literacy.",
+      "Identified and fixed accessibility issues with the Web Application, increasing accessibility scores by 30%.",
+      "Developed an extensive understanding for how a technology company operates at a national and global scale. Consistent and enthusiastic contributor to team meetings.",
+    ],
+  },
   {
     title: "AWS Certified Developer - Associate",
     company_name: "Amazon Web Services (AWS) Training and Certification",
@@ -276,13 +306,11 @@ export const projects = [
     link: "https://chatgpt.com/g/g-TbIHc00OA-enemy-npc-generator-for-table-top-and-indie-games",
   },
   // below project in progress.
-//   {
-//   iconUrl: dog,
-//   theme: "btn-back-pink",
-//   name: "Dog Picture Emporium",
-//   description:
-//     "Image hosting application hosted entirely on AWS infrastructure. Images are stored in S3 buckets and served securely via presigned URLs. A members only page features exclusive pictures only accessible to users with secret codes. The codes are stored in RDS and accessed programmatically via AWS SDKs. The application itself is hosted on ECS using Fargate. Cloudfront is used for content delivery and HTTPS protocol. The application follows AWS best practices for security, taking full advantage of security groups, private subnets, and IAM roles.",
-// },
+  //   {
+  //   iconUrl: dog,
+  //   theme: "btn-back-pink",
+  //   name: "Dog Picture Emporium",
+  //   description:
+  //     "Image hosting application hosted entirely on AWS infrastructure. Images are stored in S3 buckets and served securely via presigned URLs. A members only page features exclusive pictures only accessible to users with secret codes. The codes are stored in RDS and accessed programmatically via AWS SDKs. The application itself is hosted on ECS using Fargate. Cloudfront is used for content delivery and HTTPS protocol. The application follows AWS best practices for security, taking full advantage of security groups, private subnets, and IAM roles.",
+  // },
 ];
-
-

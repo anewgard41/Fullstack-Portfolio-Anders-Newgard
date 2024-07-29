@@ -1,6 +1,7 @@
 import aws from "./aws.svg";
 import css from "./css.svg";
-import docker from "./docker.svg"
+import docker from "./docker.svg";
+import django from "./django.svg";
 import dog from "./dog.svg";
 import express from "./express.svg";
 import git from "./git.svg";
@@ -31,12 +32,15 @@ import flavfinds from "./flavfinds.svg";
 import waveexchange from "./waveexchange.svg";
 import arrow from "./arrow.svg";
 import contact from "./contact.svg";
+import python from "./python.svg";
+import postgresql from "./postgresql.svg";
 
 export {
   aws,
   css,
   docker,
   dog,
+  django,
   express,
   git,
   github,
@@ -63,7 +67,9 @@ export {
   flavfinds,
   prt,
   paperplane,
+  postgresql,
   waveexchange,
   arrow,
   contact,
+  python,
 };
