@@ -34,6 +34,7 @@ import arrow from "./arrow.svg";
 import contact from "./contact.svg";
 import python from "./python.svg";
 import postgresql from "./postgresql.svg";
+import vote from "./vote.svg";
 
 export {
   aws,
@@ -72,4 +73,5 @@ export {
   arrow,
   contact,
   python,
+  vote,
 };

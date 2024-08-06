@@ -33,6 +33,7 @@ import {
   waveexchange,
   python,
   postgresql,
+  vote,
 } from "../assets/icons";
 
 export const skills = [
@@ -166,9 +167,10 @@ export const experiences = [
     iconBg: "#adc7e8",
     date: "July 2024 - Present",
     points: [
-      "Contributed to the creation, implementation, and maintenance of features on the Web/Mobile Application and Server at WeVote, a non profit dedicated to information and voter literacy.",
-      "Identified and fixed accessibility issues with the Web Application, increasing accessibility scores by 30%.",
-      "Developed an extensive understanding for how a technology company operates at a national and global scale. Consistent and enthusiastic contributor to team meetings.",
+      "Contributed to the creation, implementation, and maintenance of features on the Web/Mobile Application (React/Javascript) and backend Server (Django/Python) at WeVote, a non profit dedicated to information and voter literacy.",
+      // "Identified and fixed accessibility issues with the Web Application, increasing accessibility scores.",
+      // "Fixed and improved API calls using python techniques in our backend server. Added features to admin tools.",
+      "Developed an extensive understanding for how a technology company operates at a national and global scale. Consistent and enthusiastic contributor to team meetings. Willing to tackle any issue and fix any bug.",
     ],
   },
   {
@@ -258,11 +260,27 @@ export const socialLinks = [
 export const projects = [
   {
     iconUrl: waveexchange,
-    theme: "btn-back-orange",
+    theme: "btn-back-red",
     name: "Wave Exchange",
     description:
       "Your next music-sharing platform, search for songs using lyrics! Seamless discovery of new tunes and remembering those ear worms, enhanced by a user-friendly interface, personalized experiences, and efficient browsing with GraphQL. This project was built with React.js, antd, JavaScript, MongoDB, GraphQL, Stripe, Figma, Render, Express, Mongoose, and JWT. I personally was responsible for the backend, authentication, and integrating Stripe for payment processing of donations to the website.",
     link: "https://wave-exchange.onrender.com/",
+  },
+  {
+    iconUrl: vote,
+    theme: "btn-back-blue",
+    name: "WeVote WebApp",
+    description:
+      "WeVote is an open source application that removes the hassle of deciding who to vote for. Create an account, enter in policies you support and oppose, and WeVote will use data from several sources (Google Civic API, Vote Smart, MapLight, TheUnitedStates.io and the Voting Information Project) to select your ideal candidates for both State and Federal elections.",
+    link: "https://wevote.us",
+  },
+  {
+    iconUrl: vote,
+    theme: "btn-back-orange",
+    name: "WeVote Server",
+    description:
+      "The Django/Python API endpoints backend that powers the WeVote WebApp. This is where ballot data from the above sources are pooled and served up to users. Open source!",
+    link: "https://github.com/wevote/wevoteserver",
   },
   {
     iconUrl: hiker,
