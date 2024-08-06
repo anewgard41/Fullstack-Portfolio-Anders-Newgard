@@ -167,8 +167,8 @@ export const experiences = [
     date: "July 2024 - Present",
     points: [
       "Contributed to the creation, implementation, and maintenance of features on the Web/Mobile Application and Server at WeVote, a non profit dedicated to information and voter literacy.",
-      "Identified and fixed accessibility issues with the Web Application, increasing accessibility scores by 30%.",
-      "Developed an extensive understanding for how a technology company operates at a national and global scale. Consistent and enthusiastic contributor to team meetings.",
+      "Identified and fixed accessibility issues with the Web Application, increasing accessibility scores.",
+      "Developed an extensive understanding for how a technology company operates at a national and global scale. Consistent and enthusiastic contributor to team meetings. Willing to tackle any issue.",
     ],
   },
   {
