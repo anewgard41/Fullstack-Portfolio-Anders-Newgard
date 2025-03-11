@@ -1,4 +1,4 @@
-import { buffs, gsnc, jvg, weVote, unc } from "../assets/images";
+import { buffs, civicPlus, gsnc, jvg, weVote, unc } from "../assets/images";
 import {
   aws,
   contact,
@@ -161,15 +161,27 @@ export const skills = [
 
 export const experiences = [
   {
-    title: "Software Engineer",
+    title: "Sales Development Representative",
+    company_name: "CivicPlus",
+    icon: civicPlus,
+    iconBg: "#FFC0CB",
+    date: "December 2024 - Present",
+    points: [
+      "CivicPlus is a SaaS technology company dedicated to powering government operations and empowering positive experiences for residents.",
+      "Responsible for generating new business opportunities by following proven processes to prospect into business accounts.",
+      "Conisistently leveraged my programming skills to understand and communicate the technical aspects of CivicPlus software to potential clients.",
+    ],
+  },
+  {
+    title: "Software Engineer Volunteer",
     company_name: "WeVote",
     icon: weVote,
     iconBg: "#adc7e8",
     date: "July 2024 - Present",
     points: [
       "Contributed to the creation, implementation, and maintenance of features on the Web/Mobile Application (React/Javascript) and backend Server (Django/Python) at WeVote, a non profit dedicated to information and voter literacy.",
-      // "Identified and fixed accessibility issues with the Web Application, increasing accessibility scores.",
-      // "Fixed and improved API calls using python techniques in our backend server. Added features to admin tools.",
+      "Identified, documented, and reported multiple bugs using Jira, ensuring clear, technical communication with cross-functional teams for timely resolution.",
+      "Optimized Web App performance using lighthouse and advanced React techniques.",
       "Developed an extensive understanding for how a technology company operates at a national and global scale. Consistent and enthusiastic contributor to team meetings. Willing to tackle any issue and fix any bug.",
     ],
   },
