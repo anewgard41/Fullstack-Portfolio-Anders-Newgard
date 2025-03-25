@@ -4,7 +4,6 @@
 
 * [Description](#description)
 * [Technologies Used](#technologies-used)
-* [License](#license)
 * [Questions](#questions)
 
 ## Description
