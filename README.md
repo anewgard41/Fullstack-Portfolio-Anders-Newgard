@@ -9,7 +9,7 @@
 
 ## Description
 
-This is my portfolio created with React! I had so much fun toying around with this. Spin the island around and explore my portfolio and projects. I also have a contact form that you can use to reach out to me. Thanks for stopping by! 
+This is my Full Stack portfolio created with React! I had so much fun toying around with this. I used this project as a vehicle to challenge myself to build something different. Learned how to render 3D models and make them interactable in a browser environment. Navigate my projects and experience by spinning the paper plane around the island. Massive shoutouts to the artists on Sketchfab for the excellent open source models. 
 
 [Click here to check out the deployed site](https://www.dersdevelops.com/)
 
