@@ -169,7 +169,7 @@ export const experiences = [
     points: [
       "CivicPlus is a SaaS technology company dedicated to powering government operations and empowering positive experiences for residents.",
       "Responsible for generating new business opportunities by following proven processes to prospect into business accounts.",
-      "Conisistently leveraged my programming skills to understand and communicate the technical aspects of CivicPlus software to potential clients.",
+      "Consistently leveraged my programming skills to understand and communicate the technical aspects of CivicPlus software to potential clients.",
     ],
   },
   {
